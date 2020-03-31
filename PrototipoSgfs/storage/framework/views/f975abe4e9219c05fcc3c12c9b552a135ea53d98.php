@@ -1,0 +1,1 @@
+<?php /**PATH C:\XAMMPP\htdocs\PrototipoSgfs\resources\views/admin/registrarEmpleado.blade.php ENDPATH**/ ?>
