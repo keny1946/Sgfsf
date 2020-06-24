@@ -24,21 +24,27 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                            <form method="POST" action="<?php echo e(route('insumos.store')); ?>" role="form">
+                            <form method="POST" enctype="multipart/form-data" action="<?php echo e(route('insumos.store')); ?>" role="form">
 
                                     <?php echo e(csrf_field()); ?>
 
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputEmail4">Nombre</label>
-                                            <input type="text" id="Nombre" name="Nombre" class="form-control <?php echo e($errors->has('Nombre')?'is-invalid':''); ?>" value="<?php echo e(old('Nombres')); ?>">
+                                            <input type="text" id="Nombre" name="Nombre" class="form-control <?php echo e($errors->has('Nombre')?'is-invalid':''); ?>" value="<?php echo e(old('Nombres')); ?>" onkeypress="return soloLetras(event)">
                                             <?php echo $errors->first('Nombre','<div class="invalid-feedback">:message</div>'); ?>
 
                                           </div>
                                           <div class="form-group col-md-6">
                                             <label for="inputEmail4">Descripcion</label>
-                                            <input type="text" id="Descripcion" name="Descripcion" class="form-control <?php echo e($errors->has('Nombre')?'is-invalid':''); ?>" value="<?php echo e(old('Descripcion')); ?>">
+                                            <input type="text" id="Descripcion" name="Descripcion" class="form-control <?php echo e($errors->has('Nombre')?'is-invalid':''); ?>" value="<?php echo e(old('Descripcion')); ?>" onkeypress="return soloLetras(event)">
                                             <?php echo $errors->first('Descripcion','<div class="invalid-feedback">:message</div>'); ?>
+
+                                          </div>
+                                          <div class="form-group col-md-6">
+                                            <label for="inputEmail4">Cantidad</label>
+                                            <input type="number" id="cantidad" name="cantidad" class="form-control <?php echo e($errors->has('cantidad')?'is-invalid':''); ?>" value="<?php echo e(old('Descripcion')); ?>" >
+                                            <?php echo $errors->first('cantidad','<div class="invalid-feedback">:message</div>'); ?>
 
                                           </div>
                                           <div class="form-group col-md-6">
@@ -50,7 +56,6 @@
                                           <div class="form-group col-md-6">
                                             <label for="inputState">Estado</label>
                                             <select id="Estado" name="Estado" class="form-control">
-                                                <option>--Seleccione el estado--</option>
                                                 <option value="activo" name="tipodocumento">Activo</option>
                                                 <option value="inactivo" name="tipodocumento">Inactivo</option>
                                             </select>

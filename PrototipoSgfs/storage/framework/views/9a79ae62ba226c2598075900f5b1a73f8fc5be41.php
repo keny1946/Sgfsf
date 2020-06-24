@@ -31,22 +31,22 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputEmail4">Nombre</label>
-                                            <input type="text" name="Nombre" id="Nombre" class="form-control <?php echo e($errors->has('Nombre') ? 'is-invalid':''); ?>" value="<?php echo e($servicios->Nombre); ?>">
+                                            <input type="text" name="Nombre" id="Nombre" class="form-control <?php echo e($errors->has('Nombre') ? 'is-invalid':''); ?>" value="<?php echo e($servicios->Nombre); ?>" onkeypress="return soloLetras(event)">
                                             <?php echo $errors->first('Nombre', '<div class="invalid-feedback">:message</div>'); ?>
 
                                           </div>
                                           <div class="form-group col-md-6">
                                             <label for="inputEmail4">Descripcion</label>
-                                            <input type="text" id="Descripcion" name="Descripcion" class="form-control <?php echo e($errors->has('Descripcion') ? 'is-invalid':''); ?>" value="<?php echo e($servicios->Descripcion); ?>">
+                                            <input type="text" id="Descripcion" name="Descripcion" class="form-control <?php echo e($errors->has('Descripcion') ? 'is-invalid':''); ?>" value="<?php echo e($servicios->Descripcion); ?>" onkeypress="return soloLetras(event)">
                                           </div>
 
                                           <div class="form-group col-md-6">
                                             <label for="inputEmail4">Valor</label>
-                                            <input type="text" id="Valor" name="Valor" class="form-control <?php echo e($errors->has('Valor') ? 'is-invalid':''); ?>" value="<?php echo e($servicios->Valor); ?>">
+                                            <input type="text" id="Valor" name="Valor" class="form-control <?php echo e($errors->has('Valor') ? 'is-invalid':''); ?>" value="<?php echo e($servicios->Valor); ?>" onkeypress="return soloLetras(event)">
                                           </div>
                                           <div class="form-group col-md-6">
-                                            <select id="estado" name="estado" class="form-control">
-                                                <option>--Seleccione el estado--</option>
+                                              <label>Estado</label>
+                                            <select id="Estado" name="Estado" class="form-control">
                                                 <option value="activo" name="tipodocumento">Activo</option>
                                                 <option value="inactivo" name="tipodocumento">Inactivo</option>
                                             </select>

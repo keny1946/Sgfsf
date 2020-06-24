@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Empleado</title>
 </head>
-<?php if($errors->any()): ?>
-  <div class="alert alert-danger" role="alert">
-      <ul>
-        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-          <li><?php echo e($error); ?></li>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-      </ul>
-  </div>
-<?php endif; ?>
+
 <body>
     <?php $__env->startSection('navegacion'); ?>
         <main class="page-content">
+            <?php if($errors->any()): ?>
+                    <div class="alert alert-danger" role="alert">
+                        <ul>
+                            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <li><?php echo e($error); ?></li>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </ul>
+                    </div>
+                    <?php endif; ?>
             <div class="container-fluid">
+
                 <div id="box">
                     <div class="container">
                         <div class="row">
@@ -26,23 +28,22 @@
 
 
 
-                                <form method="POST" action="<?php echo e(route('Empleado.update',$empleados->id)); ?> " >
+                                <form method="POST" action="/empleado/<?php echo e($empleados->id); ?>/update " >
                                     <?php echo method_field('PATCH'); ?>
                                   <?php echo e(csrf_field()); ?>
 
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputEmail4">Nombres</label>
-                                        <input type="text" id="nombres" name="nombres" placeholder="<?php echo e($empleados->Nombres); ?>" value="<?php echo e($empleados->Nombres); ?>" class="form-control" <?php echo e(old('Nombres')); ?>>
+                                        <input type="text" id="Nombres" name="Nombres" placeholder="<?php echo e($empleados->Nombres); ?>" value="<?php echo e($empleados->Nombres); ?>" class="form-control" <?php echo e(old('Nombres')); ?> onkeypress="return soloLetras(event)">
                                           </div>
                                           <div class="form-group col-md-6">
                                             <label for="inputEmail4">Apellidos</label>
-                                          <input type="text" id="apellidos" placeholder="<?php echo e($empleados->Apellidos); ?>" value="<?php echo e($empleados->Apellidos); ?>" name="apellidos" class="form-control" <?php echo e(old('Apellidos')); ?>>
+                                          <input type="text" id="Apellidos" name="Apellidos" placeholder="<?php echo e($empleados->Apellidos); ?>" value="<?php echo e($empleados->Apellidos); ?>" name="apellidos" class="form-control" <?php echo e(old('Apellidos')); ?> onkeypress="return soloLetras(event)">
                                           </div>
                                           <div class="form-group col-md-4">
                                             <label for="inputState">Tipo de Documento</label>
-                                            <select id="idtipodocumento" name="idtipodocumento" class="form-control">
-                                                <option>--Seleccione--</option>
+                                            <select id="IdTipoDocumento" name="IdTipoDocumento" class="form-control">
                                               <?php $__currentLoopData = $tipodocumento; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $dato): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <option value="<?php echo e($dato->id); ?>" name="tipodocumento"><?php echo e($dato->Nombre); ?></option>
                                               <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -50,26 +51,26 @@
                                           </div>
                                           <div class="form-group col-md-6">
                                             <label for="inputEmail4">NroDocumento</label>
-                                          <input type="text" id="nrodocumento" name="nrodocumento" value="<?php echo e($empleados->NroDocumento); ?>" placeholder="<?php echo e($empleados->NroDocumento); ?>" class="form-control" <?php echo e(old('NroDocumento')); ?>>
+                                          <input type="text" id="NroDocumento" name="NroDocumento" value="<?php echo e($empleados->NroDocumento); ?>" placeholder="<?php echo e($empleados->NroDocumento); ?>" class="form-control" <?php echo e(old('NroDocumento')); ?>>
                                           </div>
                                           <div class="form-group col-md-6">
                                             <label for="inputEmail4">Telefono</label>
-                                          <input type="text" id="telefono" name="telefono" class="form-control" value="<?php echo e($empleados->Telefono); ?>" placeholder="<?php echo e($empleados->Telefono); ?>" <?php echo e(old('NroDocumento')); ?>>
+                                          <input type="text" id="Telefono" name="Telefono" class="form-control" value="<?php echo e($empleados->Telefono); ?>" placeholder="<?php echo e($empleados->Telefono); ?>" <?php echo e(old('NroDocumento')); ?>>
                                           </div>
                                           <div class="form-group col-md-6">
+                                              <label>Estado</label>
                                             <select id="estado" name="estado" class="form-control">
-                                                <option>--Seleccione el estado--</option>
                                                 <option value="activo" name="tipodocumento">Activo</option>
                                                 <option value="inactivo" name="tipodocumento">Inactivo</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6">
                                         <label for="inputEmail4">Email</label>
-                                        <input type="email" id="email" name="email" class="form-control" value="<?php echo e($empleados->Email); ?>" placeholder="<?php echo e($empleados->Email); ?>" <?php echo e(old('Email')); ?>>
+                                        <input type="email" id="Email" name="Email" class="form-control" value="<?php echo e($empleados->Email); ?>" placeholder="<?php echo e($empleados->Email); ?>" <?php echo e(old('Email')); ?>>
                                       </div>
                                       <div class="form-group col-md-6">
                                         <label for="inputPassword4">Contraseña</label>
-                                      <input type="password" id="clave" name="clave" class="form-control" value="<?php echo e($empleados->Clave); ?>" placeholder="<?php echo e($empleados->Clave); ?>" <?php echo e(old('Contraseña')); ?>>
+                                      <input type="password" id="Clave"  name="Clave" class="form-control" value="<?php echo e($empleados->Clave); ?>" placeholder="<?php echo e($empleados->Clave); ?>" <?php echo e(old('Contraseña')); ?>>
                                       </div>
 
                                     </div>

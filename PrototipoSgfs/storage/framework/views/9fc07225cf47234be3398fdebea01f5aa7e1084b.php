@@ -31,16 +31,16 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputEmail4">Nombres</label>
-                                            <input type="text" id="nombres" name="nombres" class="form-control" value="<?php echo e(old('Nombres')); ?>">
+                                            <input type="text" id="Nombres" name="Nombres" class="form-control" value="<?php echo e(old('Nombres')); ?>" onkeypress="return soloLetras(event)">
 
                                           </div>
                                           <div class="form-group col-md-6">
                                             <label for="inputEmail4">Apellidos</label>
-                                            <input type="text" id="apellidos" name="apellidos" class="form-control" value="<?php echo e(old('Apellidos')); ?>">
+                                            <input type="text" id="Apellidos" name="Apellidos" class="form-control" value="<?php echo e(old('Apellidos')); ?>" onkeypress="return soloLetras(event)">
                                           </div>
                                           <div class="form-group col-md-4">
                                             <label for="inputState">Tipo de Documento</label>
-                                            <select id="idtipodocumento" name="idtipodocumento" class="form-control">
+                                            <select id="IdTipoDocumento" name="IdTipoDocumento" class="form-control">
                                               <?php $__currentLoopData = $tipodocumento; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $dato): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <option value="<?php echo e($dato->id); ?>" name="tipodocumento"><?php echo e($dato->Nombre); ?></option>
                                               <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -49,26 +49,25 @@
                                           <div class="form-group col-md-6">
                                             <label for="inputState">Estado</label>
                                             <select id="estado" name="estado" class="form-control">
-                                                <option>--Seleccione el estado--</option>
                                                 <option value="activo" name="tipodocumento">Activo</option>
                                                 <option value="inactivo" name="tipodocumento">Inactivo</option>
                                             </select>
                                         </div>
                                           <div class="form-group col-md-6">
                                             <label for="inputEmail4">NroDocumento</label>
-                                            <input type="text" id="nrodocumento" name="nrodocumento" class="form-control" value="<?php echo e(old('NroDocumento')); ?>">
+                                            <input type="text" id="NroDocumento" name="NroDocumento" class="form-control" value="<?php echo e(old('NroDocumento')); ?>">
                                           </div>
                                           <div class="form-group col-md-6">
                                             <label for="inputEmail4">Telefono</label>
-                                            <input type="text" id="telefono" name="telefono" class="form-control" value="<?php echo e(old('NroDocumento')); ?>">
+                                            <input type="text" id="Telefono" name="Telefono" class="form-control" value="<?php echo e(old('NroDocumento')); ?>">
                                           </div>
                                         <div class="form-group col-md-6">
                                         <label for="inputEmail4">Email</label>
-                                        <input type="email" id="email" name="email" class="form-control" value="<?php echo e(old('Email')); ?>">
+                                        <input type="email" id="Email" name="Email" class="form-control" value="<?php echo e(old('Email')); ?>">
                                       </div>
                                       <div class="form-group col-md-6">
                                         <label for="inputPassword4">Contraseña</label>
-                                        <input type="password" id="clave"  name="clave" class="form-control">
+                                        <input type="password" id="Clave"  name="Clave" class="form-control">
                                       </div>
 
                                     </div>
@@ -81,6 +80,7 @@
             </div>
         </main>
     <?php $__env->stopSection(); ?>
+
 </body>
 </html>
 

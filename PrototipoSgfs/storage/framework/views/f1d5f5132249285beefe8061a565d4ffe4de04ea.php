@@ -33,7 +33,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <table class="table">
+                    <table id="tbl_servicios" class="table">
                         <thead class="thead-dark">
                           <tr>
                             <th scope="col">Id</th>
@@ -46,19 +46,7 @@
                         </thead>
 
                         <tbody>
-                            <?php $__currentLoopData = $servicios; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $servicio): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <tr>
-                                <td><?php echo e($servicio->id); ?></td>
-                                <td><?php echo e($servicio->Nombre); ?></td>
-                                <td><?php echo e($servicio->Descripcion); ?></td>
-                                <td><?php echo e($servicio->Valor); ?></td>
-                                <td><?php echo e($servicio->Estado); ?></td>
-                                <td>
-                                <a class="btn btn-light" href="/servicios/<?php echo e($servicio->id); ?>/edit">Editar</a>
 
-                                </td>
-                                </tr>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </tbody>
                       </table>
                 </div>
@@ -67,6 +55,24 @@
     </div>
     </div>
     </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="/js/datatables.min.js"></script>
+    <script>
+           $("#tbl_servicios").DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: '/servicios/listar',
+        columns: [
+            {data: 'id', name: 'id'},
+            {data: 'Nombre', name: 'Nombre'},
+            {data: 'Descripcion', name: 'Descripcion'},
+            {data: 'Valor', name: 'Valor'},
+            {data: 'Estado', name: 'Estado'},
+            {data: 'editar', name: 'editar', orderable: false, searchable: false}
+        ]
+    });
+    </script>
     <?php $__env->stopSection(); ?>
 </body>
 </html>
