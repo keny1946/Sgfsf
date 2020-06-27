@@ -1,0 +1,169 @@
+[
+{"type":"header","version":"5.0.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"sgfspro"},
+{"type":"table","name":"currencies","database":"sgfspro","data":
+[
+{"iso":"cop","created_at":"2020-06-26 11:42:01","updated_at":"2020-06-26 11:42:01"},
+{"iso":"eur","created_at":"2020-06-26 11:42:01","updated_at":"2020-06-26 11:42:01"},
+{"iso":"usd","created_at":"2020-06-26 11:42:01","updated_at":"2020-06-26 11:42:01"}
+]
+}
+,{"type":"table","name":"domicilio","database":"sgfspro","data":
+[
+
+]
+}
+,{"type":"table","name":"empleados","database":"sgfspro","data":
+[
+{"id":"1","Nombres":"Carlos andres","Apellidos":"Villegas Rendon","NroDocumento":"1478523969","Email":"carlos@hotmail.com","Telefono":"31244578","Clave":"12345678","estado":"activo","created_at":null,"updated_at":null,"idTipoDocumento":"1"}
+]
+}
+,{"type":"table","name":"eventos","database":"sgfspro","data":
+[
+{"id":"3","nombre":"Matrimonio","descripcion":"*","estado":"activo","imagen":"Matrimonio1592630714.jpeg","created_at":"2020-06-20 00:25:14","updated_at":"2020-06-20 00:25:14"}
+]
+}
+,{"type":"table","name":"eventos_servicios","database":"sgfspro","data":
+[
+
+]
+}
+,{"type":"table","name":"failed_jobs","database":"sgfspro","data":
+[
+
+]
+}
+,{"type":"table","name":"insumos","database":"sgfspro","data":
+[
+{"id":"1","Nombre":"Orquidia","Valor":"5000","cantidad":"8","Descripcion":"*","Estado":"activo","Foto":"C:\\xampp\\tmp\\php1508.tmp","created_at":"2020-06-04 19:22:02","updated_at":"2020-06-20 15:35:08"},
+{"id":"2","Nombre":"Muñeco","Valor":"50000","cantidad":"18","Descripcion":"*","Estado":"activo","Foto":"C:\\xampp\\tmp\\php8209.tmp","created_at":"2020-06-04 20:56:26","updated_at":"2020-06-05 16:07:00"},
+{"id":"3","Nombre":"Girasoles","Valor":"75000","cantidad":"6","Descripcion":"*","Estado":"activo","Foto":"C:\\xampp\\tmp\\php5563.tmp","created_at":"2020-06-04 20:58:25","updated_at":"2020-06-08 08:30:32"},
+{"id":"4","Nombre":"Rosas","Valor":"5000","cantidad":"0","Descripcion":"*","Estado":"inactivo","Foto":"C:\\xampp\\tmp\\phpE020.tmp","created_at":"2020-06-06 10:26:53","updated_at":"2020-06-08 13:51:52"},
+{"id":"5","Nombre":"Caja","Valor":"36000","cantidad":"5","Descripcion":"*","Estado":"activo","Foto":"C:\\xampp\\tmp\\php42E2.tmp","created_at":"2020-06-06 10:27:18","updated_at":"2020-06-07 13:04:48"}
+]
+}
+,{"type":"table","name":"migrations","database":"sgfspro","data":
+[
+{"id":"1","migration":"2014_10_12_000000_create_users_table","batch":"1"},
+{"id":"2","migration":"2014_10_12_100000_create_password_resets_table","batch":"1"},
+{"id":"3","migration":"2019_08_19_000000_create_failed_jobs_table","batch":"1"},
+{"id":"4","migration":"2020_03_13_134919_create_tipo_documento_table","batch":"1"},
+{"id":"5","migration":"2020_03_23_001038_create_empleados_table","batch":"1"},
+{"id":"6","migration":"2020_03_27_012218_create_servicios_table","batch":"1"},
+{"id":"7","migration":"2020_03_28_185401_create_insumos_table","batch":"1"},
+{"id":"8","migration":"2020_04_17_183738_create_domicilio_table","batch":"1"},
+{"id":"9","migration":"2020_05_04_151443_create_pedido_table","batch":"1"},
+{"id":"10","migration":"2020_05_04_155115_create_producto_table","batch":"1"},
+{"id":"11","migration":"2020_05_18_194440_create_role_user_table","batch":"1"},
+{"id":"12","migration":"2020_05_18_205150_create_role_table","batch":"1"},
+{"id":"13","migration":"2020_05_18_210846_create_role_has_permissions_table","batch":"1"},
+{"id":"14","migration":"2020_06_02_221021_create_producto_insumo_table","batch":"1"},
+{"id":"15","migration":"2020_06_16_161847_create_evento_table","batch":"2"},
+{"id":"16","migration":"2020_06_16_163417_create_eventos_table","batch":"3"},
+{"id":"17","migration":"2020_06_16_192316_create_eventos_servicios_table","batch":"4"},
+{"id":"18","migration":"2020_06_19_151114_create_pedido_evento_table","batch":"5"},
+{"id":"19","migration":"2020_06_21_235047_create_pedido_evento_table","batch":"6"},
+{"id":"20","migration":"2020_06_26_090738_create_payment_platforms_table","batch":"7"},
+{"id":"21","migration":"2020_06_26_091033_create_currencies_table","batch":"7"}
+]
+}
+,{"type":"table","name":"password_resets","database":"sgfspro","data":
+[
+
+]
+}
+,{"type":"table","name":"payment_platforms","database":"sgfspro","data":
+[
+{"id":"1","name":"Paypal","image":"img\/payment.platforms\/paypal.jpg.jpg","created_at":"2020-06-26 11:42:01","updated_at":"2020-06-26 11:42:01"},
+{"id":"2","name":"Pse","image":"img\/payment.platforms\/pse.jpg","created_at":"2020-06-26 11:42:01","updated_at":"2020-06-26 11:42:01"},
+{"id":"3","name":"Stripe","image":"img\/payment.platforms\/stripe.jpg.jpg","created_at":"2020-06-26 11:42:01","updated_at":"2020-06-26 11:42:01"}
+]
+}
+,{"type":"table","name":"pedido","database":"sgfspro","data":
+[
+{"id":"1","IdCliente":"4","IdProducto":"1","descripcion":"*","cantidad":"0","valor":"0","created_at":null,"updated_at":null},
+{"id":"2","IdCliente":"2","IdProducto":"4","descripcion":"*","cantidad":"0","valor":"0","created_at":null,"updated_at":null},
+{"id":"3","IdCliente":"2","IdProducto":"4","descripcion":"*","cantidad":"0","valor":"0","created_at":null,"updated_at":null},
+{"id":"4","IdCliente":"2","IdProducto":"4","descripcion":"*","cantidad":"1","valor":"0","created_at":null,"updated_at":null},
+{"id":"5","IdCliente":"2","IdProducto":"5","descripcion":"*","cantidad":"5","valor":"0","created_at":null,"updated_at":null},
+{"id":"6","IdCliente":"2","IdProducto":"5","descripcion":"*","cantidad":"1","valor":"0","created_at":null,"updated_at":null},
+{"id":"7","IdCliente":"2","IdProducto":"5","descripcion":"*","cantidad":"1","valor":"0","created_at":null,"updated_at":null},
+{"id":"8","IdCliente":"2","IdProducto":"5","descripcion":"*","cantidad":"1","valor":"66000","created_at":null,"updated_at":null},
+{"id":"9","IdCliente":"2","IdProducto":"3","descripcion":"*","cantidad":"2","valor":"40000","created_at":null,"updated_at":null}
+]
+}
+,{"type":"table","name":"pedidoevento","database":"sgfspro","data":
+[
+{"id":"1","idCliente":"2","idEvento":"3","idServicio":"3","descripcion":"*","valor":"81200","fecha":"2020-06-27","created_at":"2020-06-22 00:03:14","updated_at":"2020-06-22 00:03:14"},
+{"id":"2","idCliente":"2","idEvento":"3","idServicio":"3","descripcion":"*","valor":"11200","fecha":"2020-06-27","created_at":"2020-06-23 09:53:35","updated_at":"2020-06-23 09:53:35"}
+]
+}
+,{"type":"table","name":"producto","database":"sgfspro","data":
+[
+{"id":"1","nombreProducto":"Caja de girasoles","valor":"450000","descripcion":"*","estado":"activo","cantidad":"6","imagen":"Caja de girasoles1591623006.jpeg","created_at":"2020-06-08 08:30:06","updated_at":"2020-06-08 13:51:11"},
+{"id":"3","nombreProducto":"Caja de rosas","valor":"20000","descripcion":"*","estado":"activo","cantidad":"3","imagen":"Caja de rosas1591623176.jpeg","created_at":"2020-06-08 08:32:56","updated_at":"2020-06-27 10:10:47"},
+{"id":"4","nombreProducto":"Ramo de flores","valor":"40000","descripcion":"*","estado":"inactivo","cantidad":"0","imagen":"Ramo de flores1591623308.jpeg","created_at":"2020-06-08 08:35:08","updated_at":"2020-06-26 16:20:46"},
+{"id":"5","nombreProducto":"Rosas","valor":"66000","descripcion":"*","estado":"activo","cantidad":"1","imagen":"Rosas1591642312.jpeg","created_at":"2020-06-08 13:51:52","updated_at":"2020-06-26 18:04:46"},
+{"id":"6","nombreProducto":"Caja de flores","valor":"10000","descripcion":"*","estado":"activo","cantidad":"5","imagen":"Caja de flores1592685308.jpeg","created_at":"2020-06-20 15:35:08","updated_at":"2020-06-20 15:35:08"}
+]
+}
+,{"type":"table","name":"producto_insumo","database":"sgfspro","data":
+[
+{"id":"5","IdProducto":"3","IdInsumos":"1","Cantidad":"7","created_at":"2020-06-04 16:59:37","updated_at":"2020-06-04 16:59:37"},
+{"id":"6","IdProducto":"4","IdInsumos":"1","Cantidad":"7","created_at":"2020-06-04 17:00:32","updated_at":"2020-06-04 17:00:32"},
+{"id":"7","IdProducto":"5","IdInsumos":"1","Cantidad":"5","created_at":"2020-06-04 17:01:49","updated_at":"2020-06-04 17:01:49"},
+{"id":"8","IdProducto":"6","IdInsumos":"1","Cantidad":"5","created_at":"2020-06-04 17:01:56","updated_at":"2020-06-04 17:01:56"},
+{"id":"9","IdProducto":"1","IdInsumos":"1","Cantidad":"7","created_at":"2020-06-04 17:05:54","updated_at":"2020-06-04 17:05:54"},
+{"id":"11","IdProducto":"3","IdInsumos":"3","Cantidad":"2","created_at":"2020-06-04 18:58:16","updated_at":"2020-06-04 18:58:16"},
+{"id":"12","IdProducto":"4","IdInsumos":"1","Cantidad":"5","created_at":"2020-06-04 19:17:16","updated_at":"2020-06-04 19:17:16"},
+{"id":"13","IdProducto":"1","IdInsumos":"1","Cantidad":"4","created_at":"2020-06-04 21:22:02","updated_at":"2020-06-04 21:22:02"},
+{"id":"15","IdProducto":"3","IdInsumos":"2","Cantidad":"2","created_at":"2020-06-05 16:07:00","updated_at":"2020-06-05 16:07:00"},
+{"id":"16","IdProducto":"4","IdInsumos":"3","Cantidad":"3","created_at":"2020-06-06 10:28:33","updated_at":"2020-06-06 10:28:33"},
+{"id":"17","IdProducto":"5","IdInsumos":"5","Cantidad":"5","created_at":"2020-06-07 12:57:17","updated_at":"2020-06-07 12:57:17"},
+{"id":"19","IdProducto":"3","IdInsumos":"4","Cantidad":"4","created_at":"2020-06-08 08:32:57","updated_at":"2020-06-08 08:32:57"},
+{"id":"20","IdProducto":"4","IdInsumos":"1","Cantidad":"3","created_at":"2020-06-08 08:35:08","updated_at":"2020-06-08 08:35:08"},
+{"id":"21","IdProducto":"5","IdInsumos":"4","Cantidad":"6","created_at":"2020-06-08 13:51:52","updated_at":"2020-06-08 13:51:52"},
+{"id":"22","IdProducto":"6","IdInsumos":"1","Cantidad":"2","created_at":"2020-06-20 15:35:08","updated_at":"2020-06-20 15:35:08"}
+]
+}
+,{"type":"table","name":"role","database":"sgfspro","data":
+[
+
+]
+}
+,{"type":"table","name":"role_has_permissions","database":"sgfspro","data":
+[
+
+]
+}
+,{"type":"table","name":"role_user","database":"sgfspro","data":
+[
+
+]
+}
+,{"type":"table","name":"servicios","database":"sgfspro","data":
+[
+{"id":"1","Nombre":"Comida","Descripcion":"*","Valor":"5000.00","Estado":"activo","created_at":null,"updated_at":null},
+{"id":"2","Nombre":"Musica","Descripcion":"*","Valor":"75000.00","Estado":"activo","created_at":null,"updated_at":null},
+{"id":"3","Nombre":"Meseros","Descripcion":"*","Valor":"6200.00","Estado":"activo","created_at":null,"updated_at":null},
+{"id":"4","Nombre":"Serenata","Descripcion":"*","Valor":"12000.00","Estado":"activo","created_at":null,"updated_at":null}
+]
+}
+,{"type":"table","name":"tipodocumento","database":"sgfspro","data":
+[
+{"id":"1","Nombre":"Tarjeta de Identidad","created_at":null,"updated_at":null},
+{"id":"2","Nombre":"Cedula Ciudadana","created_at":null,"updated_at":null},
+{"id":"3","Nombre":"Tarjeta de Identidad","created_at":null,"updated_at":null},
+{"id":"4","Nombre":"Cedula Ciudadana","created_at":null,"updated_at":null}
+]
+}
+,{"type":"table","name":"users","database":"sgfspro","data":
+[
+{"id":"1","nombre":"Jhoan Sebastian","apellido":"Duque Zapata","Domicilio":"Calle 45#12-36","email":"jhoan1113@hotmail.com","email_verified_at":null,"password":"$2y$10$mhU.Lbw3uJGAJ3KLYJpVK.BMQkW1EZCEr0sCuVK4rilR0IGxqAknC","telefono":"3197806869","role":"admin","estado":"activo","remember_token":"gZM8fxJC9RFeVhaKbDd5gh0WKPpXKeZFn6gfZ7H3t8jIYmHdria4CHYQgO0T","created_at":"2020-06-04 16:34:24","updated_at":"2020-06-08 13:53:08"},
+{"id":"2","nombre":"Carlos Andres","apellido":"Villegas Rendon","Domicilio":"Calle 45# 96-12","email":"villegas@gmail.com","email_verified_at":null,"password":"$2y$10$i5sfjGL5V9blNu2orrnbbO21AfxMqSTw2vy2eIvCdmGHKWDXyJOGu","telefono":"3124654876","role":"cliente","estado":"activo","remember_token":null,"created_at":"2020-06-05 16:03:05","updated_at":"2020-06-22 20:15:19"},
+{"id":"3","nombre":"Hector","apellido":"Zapata","Domicilio":"Calle 45# 96-12","email":"jhoanduque1113@gmail.com","email_verified_at":null,"password":"$2y$10$pHNVqyO7mIBS5reAr14qOeMytm8QZJ8pl.thZdZB7rRcLY7gUIYue","telefono":"3164529645","role":"cliente","estado":"inactivo","remember_token":"jHerkJSPojeUQ1fIH50mwJGOhdlzhW2i8hppwvGH7JrCDeTwLdCC2a8e7N1n","created_at":"2020-06-06 10:24:32","updated_at":"2020-06-22 19:38:56"},
+{"id":"4","nombre":"Jhoan","apellido":"Duque","Domicilio":"Calle 45# 96-45","email":"jsduque64@misena.edu.co","email_verified_at":null,"password":"$2y$10$KDJcUUv4TUrv01uXFLA20u8tk1arM.ri0MyxYXimVUvyxW1m8RTum","telefono":"3197806869","role":"cliente","estado":"activo","remember_token":null,"created_at":"2020-06-08 13:49:58","updated_at":"2020-06-08 13:49:58"},
+{"id":"5","nombre":"Carlos Andres","apellido":"Thor Thorfin","Domicilio":"Olimpo","email":"thortillas@olimpo.com","email_verified_at":null,"password":"$2y$10$UwrS\/9agDph9HvWNihxcbehg4IbR3fX2XylSrVbZwehx7czgz.8IG","telefono":"31256794","role":"cliente","estado":"activo","remember_token":null,"created_at":"2020-06-23 01:21:53","updated_at":"2020-06-23 01:21:53"}
+]
+}
+]
